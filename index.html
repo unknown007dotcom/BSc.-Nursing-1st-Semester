@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f7f4" />
+  <meta name="description" content="A calm, focused study space for first-year nursing students." />
+  <title>CareStudy — Learn nursing with confidence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home"><span class="brand-mark">✚</span><span>care<span class="brand-light">study</span><small>YOUR NURSING JOURNEY</small></span></a>
+      <div class="side-label">STUDY SPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" data-view="home"><span>⌂</span> Overview</a>
+        <a class="nav-link" href="#subjects" data-view="subjects"><span>▤</span> My subjects <i>4</i></a>
+        <a class="nav-link" href="#library" data-view="library"><span>▧</span> Book library</a>
+        <a class="nav-link" href="#practice" data-view="practice"><span>◎</span> Practice & quiz</a>
+        <a class="nav-link" href="#notes" data-view="notes"><span>▤</span> My notes</a>
+      </nav>
+      <div class="side-label side-label-spaced">YOUR PROGRESS</div>
+      <div class="streak-card"><div class="streak-icon">✦</div><div><b id="streakCount">3 day streak</b><small>Little steps add up.</small></div><span class="streak-fire">🔥</span></div>
+      <div class="sidebar-bottom"><div class="help-card"><div class="help-icon">♡</div><b>You've got this.</b><p>Steady practice today makes a confident nurse tomorrow.</p><a href="#practice">Study for 10 min <span>↗</span></a></div><div class="profile-row"><div class="avatar">AS</div><div class="profile-copy"><b id="profileName">Aisha Student</b><small id="profileStatus">First year · B.Sc. Nursing</small></div><button id="authButton" class="icon-button" title="Sign in with Google" aria-label="Sign in">↗</button></div></div>
+    </aside>
+    <main class="main-content" id="home">
+      <header class="topbar"><button class="mobile-menu icon-button" id="menuToggle" aria-label="Open menu">☰</button><div class="breadcrumbs">My learning <span>/</span> <b>Overview</b></div><div class="top-actions"><button class="icon-button" id="searchFocus" title="Search">⌕</button><button class="date-pill"><span class="live-dot"></span> Semester 1 <span>⌄</span></button><button class="avatar avatar-small" id="topAvatar">AS</button></div></header>
+      <div class="content-wrap">
+        <section class="welcome-row"><div><div class="eyebrow"><span class="sun-icon">☼</span> MONDAY, YOUR NEXT SMALL WIN</div><h1>Good morning, <span id="greetingName">Aisha</span><span class="wave">✳</span></h1><p class="welcome-sub">Your future patients are counting on the care you’re learning today.</p></div><div class="week-chip"><span class="week-icon">◷</span><span><b>Week 08</b><small>of your first year</small></span></div></section>
+        <section class="hero-grid">
+          <article class="feature-card"><div class="feature-content"><div class="tag"><span>✦</span> PICK UP WHERE YOU LEFT OFF</div><h2>Understand the<br><em>human heart.</em></h2><p>Follow blood on its journey through the chambers, valves, and vessels that keep us alive.</p><div class="lesson-meta"><span>◷ &nbsp;12 min</span><span class="meta-sep">·</span><span>ANATOMY & PHYSIOLOGY</span></div><button class="primary-button" data-lesson="heart">Continue lesson <span>→</span></button></div><div class="heart-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="heart-glow"></div><svg viewBox="0 0 300 300" class="heart-svg"><defs><linearGradient id="heartFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e89a8b"/><stop offset="1" stop-color="#a84c50"/></linearGradient></defs><path d="M151 247C129 226 74 181 67 135c-6-43 41-62 72-25 24-47 86-42 94 4 9 49-52 102-82 133Z" fill="url(#heartFill)" stroke="#f4b1a6" stroke-width="3"/><path d="M137 109c-3-29-9-47-23-61m58 62c2-28 11-43 26-59M144 132c-20-17-34-23-49-22m73 29c20-17 35-22 51-18m-69 20c-4 24-6 48-5 70" fill="none" stroke="#ffd9c8" stroke-width="9" stroke-linecap="round"/><path d="M142 113c-2-23-4-42-12-61m47 64c1-23 6-39 20-54" fill="none" stroke="#e8847f" stroke-width="5" stroke-linecap="round"/></svg><div class="heart-label label-top">AORTA <span></span></div><div class="heart-label label-bottom"><span></span> LEFT VENTRICLE</div><div class="art-caption">A closer look at you.</div></div><div class="hero-index">01 <span> / 04</span></div></article>
+          <aside class="progress-card"><div class="progress-top"><div><div class="eyebrow muted">YOUR SEMESTER</div><h3>Growing every day.</h3></div><button class="dots-button" aria-label="More options">···</button></div><div class="progress-ring-wrap"><svg class="progress-ring" viewBox="0 0 120 120"><circle class="ring-track" cx="60" cy="60" r="49"/><circle class="ring-value" cx="60" cy="60" r="49"/></svg><div class="ring-copy"><b id="progressPercent">42<span>%</span></b><small>complete</small></div></div><div class="progress-note"><span class="progress-check">✓</span><span><b>You're right on track</b><small>Keep showing up for yourself.</small></span></div><div class="progress-divider"></div><div class="stat-row"><div><span class="stat-number" id="lessonsDone">12</span><small>lessons done</small></div><div class="stat-rule"></div><div><span class="stat-number">4.8<span class="star"> ★</span></span><small>hours this week</small></div></div></aside>
+        </section>
+        <section class="subjects-section" id="subjects"><div class="section-heading"><div><div class="eyebrow muted">BUILT AROUND YOUR SYLLABUS</div><h2>Your subjects <span class="subject-count">04</span></h2></div><a class="text-link" href="#library">Explore all subjects <span>→</span></a></div><div class="subject-grid" id="subjectGrid"></div></section>
+        <section class="bottom-grid"><article class="today-card" id="practice"><div class="section-heading compact"><div><div class="eyebrow muted">A LITTLE PRACTICE GOES A LONG WAY</div><h2>Today's study plan</h2></div><span class="plan-date">03 tasks</span></div><div class="task-list" id="taskList"></div><div class="plan-footer"><span>Progress saves on this device</span><span class="plan-progress"><i id="taskProgress"></i></span></div></article><article class="library-card" id="library"><div class="library-top"><span class="book-illustration">▤</span><span class="eyebrow">YOUR BOOKSHELF</span><span class="library-arrow">↗</span></div><h3>Good sources.<br>Always within reach.</h3><p>Open your class books and study guides from Google Drive.</p><button class="library-button" id="openLibrary">Browse your library <span>→</span></button><div class="book-stack"><i></i><i></i><i></i></div></article></section>
+        <footer>Made for the people who care for people. <span>·</span> Study smart, care deeply.</footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <dialog id="libraryDialog"><div class="dialog-head"><div><div class="eyebrow muted">GOOGLE DRIVE · YOUR MATERIALS</div><h2>Your nursing library</h2></div><button class="icon-button close-dialog" aria-label="Close">×</button></div><p class="dialog-intro">These are materials already in your Drive. They open in a new tab; access follows your Drive permissions.</p><div class="library-list" id="libraryList"></div></dialog>
+  <dialog id="lessonDialog"><button class="icon-button close-dialog" aria-label="Close">×</button><div id="lessonContent"></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
