@@ -4,7 +4,7 @@ A responsive static study dashboard designed around the first-year nursing mater
 
 ## Run locally
 
-Open `index.html` in a browser, or run a local static server (for example `python -m http.server 8000`). No build step or paid service is required.
+Run `npm install` then `npm run dev` for the local app. `npm run build` creates the Vite static production bundle in `dist/`.
 
 ## Optional Google sign-in (Supabase free tier)
 

@@ -1,0 +1,26 @@
+{
+  "name": "carestudy-nursing",
+  "version": "1.0.0",
+  "description": "A responsive static study dashboard designed around the first-year nursing materials in the connected Google Drive. It includes interactive study-plan tracking, a lesson preview, and a Drive library with direct links to course resources.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unknown007dotcom/BSc.-Nursing-1st-Semester.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unknown007dotcom/BSc.-Nursing-1st-Semester/issues"
+  },
+  "homepage": "https://github.com/unknown007dotcom/BSc.-Nursing-1st-Semester#readme",
+  "devDependencies": {
+    "vite": "^8.3.5"
+  },
+  "private": true
+}

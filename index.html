@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="config.js"></script>
+  <script src="/config.js"></script>
 </head>
 <body>
   <div class="app-shell">
@@ -45,6 +45,6 @@
   <div class="toast" id="toast" role="status"></div>
   <dialog id="libraryDialog"><div class="dialog-head"><div><div class="eyebrow muted">GOOGLE DRIVE · YOUR MATERIALS</div><h2>Your nursing library</h2></div><button class="icon-button close-dialog" aria-label="Close">×</button></div><p class="dialog-intro">These are materials already in your Drive. They open in a new tab; access follows your Drive permissions.</p><div class="library-list" id="libraryList"></div></dialog>
   <dialog id="lessonDialog"><button class="icon-button close-dialog" aria-label="Close">×</button><div id="lessonContent"></div></dialog>
-  <script src="app.js"></script>
+  <script type="module" src="/app.js"></script>
 </body>
 </html>
